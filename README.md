@@ -6,7 +6,6 @@ Une application JavaFX complète pour la gestion des stages en entreprise, déve
 ![JavaFX](https://img.shields.io/badge/JavaFX-21-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
 ![Maven](https://img.shields.io/badge/Maven-3.6+-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 📋 Table des matières
 
