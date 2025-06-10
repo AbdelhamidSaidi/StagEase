@@ -6,7 +6,6 @@ Une application JavaFX complète pour la gestion des stages en entreprise, déve
 ![JavaFX](https://img.shields.io/badge/JavaFX-21-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
 ![Maven](https://img.shields.io/badge/Maven-3.6+-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ## 📋 Table des matières
 
@@ -282,26 +281,8 @@ mysql -u root -p gestion_stages < backup_20240101.sql
 - [ ] Module de gestion des entreprises
 - [ ] Système de notation avancé
 
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-## 📞 Support
-
-- 🐛 *Issues* : [GitHub Issues](https://github.com/votre-username/gestion-stages/issues)
-- 📧 *Email* : votre.email@exemple.com
-- 📖 *Documentation* : [Wiki du projet](https://github.com/votre-username/gestion-stages/wiki)
-
 ## 🏆 Auteurs
 
-- *Votre Nom* - Développeur principal - [@votre-username](https://github.com/votre-username)
-
-## 🙏 Remerciements
-
-- Équipe de développement
-- Testeurs et contributeurs
-- Communauté JavaFX
-
----
-
-⭐ *N'hésitez pas à donner une étoile si ce projet vous a aidé !*
+- Abdelhamid SAIDI 
+- Anas RIFAK - [@votre-username](https://github.com/TheStriked)
+- Safaa MOUFKI - [@votre-username](https://github.com/TheStriked)
