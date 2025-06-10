@@ -85,7 +85,7 @@ mysql --version
 
 1. *Cloner le repository*
 ```bash
-git clone https://github.com/votre-username/gestion-stages.git
+git clone https://github.com/AbdelhamidSaidi/StagEase
 cd gestion-stages
 ```
 
