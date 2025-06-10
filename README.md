@@ -64,12 +64,13 @@ Ce système permet de gérer efficacement le processus complet des stages en ent
 | *JDBC* | 8.0.33 | Connecteur base de données |
 
 ## 🚀 Installation
+## 🚀 Installation
 
 ### Prérequis
 
 Assurez-vous d'avoir installé :
 
-\\\`bash
+```bash
 # Java 17 ou supérieur
 java -version
 
@@ -77,63 +78,64 @@ java -version
 mvn -version
 
 # MySQL 8.0 ou supérieur
-mysql --version
-\\\`
+mysql --version 
+```
 
 ### Étapes d'installation
 
 1. *Cloner le repository*
-\\\`bash
+```bash
 git clone https://github.com/votre-username/gestion-stages.git
 cd gestion-stages
-\\\`
+```
 
 2. *Configurer MySQL*
-\\\`bash
+
+```bash
 # Démarrer MySQL
 sudo systemctl start mysql  # Linux
 brew services start mysql   # macOS
 
 # Se connecter à MySQL
 mysql -u root -p
-\\\`
+```
 
 3. *Créer la base de données*
-\\\`bash
+```bash
 # Exécuter les scripts de création
 mysql -u root -p < scripts/create-database-final.sql
 mysql -u root -p < scripts/insert-data-final.sql
-\\\`
+```
 
 4. *Configurer la connexion* (si nécessaire)
 
 Modifier src/main/java/com/gestionstages/util/DatabaseConnection.java :
-\\\`java
+```java
 private static final String URL = "jdbc:mysql://localhost:3306/gestion_stages";
 private static final String USERNAME = "root";
 private static final String PASSWORD = "votre_mot_de_passe";
-\\\`
+```
 
 5. *Compiler et lancer*
-\\\`bash
+```bash
 # Compiler le projet
 mvn clean compile
 
 # Lancer l'application
 mvn javafx:run
-\\\`
+```
 
 ## ⚙ Configuration
 
 ### Variables d'environnement (optionnel)
 
-\\\`bash
+```bash
 export DB_HOST=localhost
 export DB_PORT=3306
 export DB_NAME=gestion_stages
 export DB_USER=root
 export DB_PASSWORD=votre_mot_de_passe
-\\\`
+```
 
 ### Configuration IDE
 
@@ -141,9 +143,9 @@ Pour *IntelliJ IDEA* :
 1. Importer le projet Maven
 2. Configurer le SDK Java 17+
 3. Ajouter les modules JavaFX dans les VM options :
-\\\`
+```
 --module-path /path/to/javafx/lib --add-modules javafx.controls,javafx.fxml
-\\\`
+```
 
 ## 🎮 Utilisation
 
