@@ -284,5 +284,5 @@ mysql -u root -p gestion_stages < backup_20240101.sql
 ## 🏆 Auteurs
 
 - Abdelhamid SAIDI 
-- Anas RIFAK - [@votre-username](https://github.com/TheStriked)
-- Safaa MOUFKI - [@votre-username](https://github.com/TheStriked)
+- Anas RIFAK - [@anas_rifak](https://github.com/TheStriked)
+- Safaa MOUFKI - [@safaa_moufki](https://github.com/TheStriked)
