@@ -165,13 +165,13 @@ Pour *IntelliJ IDEA* :
 ## 👥 Comptes de test
 
 ### Responsable du Personnel
-\\\`
+
 Email: marie.dupont@entreprise.com
 Mot de passe: password123
-\\\`
+
 
 ### Responsables de Stages
-\\\`
+
 Email: pierre.martin@entreprise.com
 Mot de passe: password123
 
@@ -180,7 +180,7 @@ Mot de passe: password123
 
 Email: jean.bernard@entreprise.com
 Mot de passe: password123
-\\\`
+
 
 ## 📁 Structure du projet
 
