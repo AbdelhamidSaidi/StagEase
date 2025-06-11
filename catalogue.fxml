@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="rootContainer" maxHeight="Infinity" maxWidth="Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionstages.controller.CatalogueController">
+   <children>
+      <!-- En-tête sombre -->
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: #1a2035; -fx-padding: 15 20;">
+         <children>
+            <Label text="Gestion des Stages" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label text="Connecté: Utilisateur" textFill="LIGHTGRAY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      
+      <!-- Barre de navigation -->
+      <HBox fx:id="navBar" alignment="CENTER_LEFT" style="-fx-background-color: #e0e0e0; -fx-border-color: #cccccc; -fx-border-width: 0 0 1 0;">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <children>
+            <Button fx:id="retourButton" style="-fx-background-color: #6c757d; -fx-text-fill: white;" text="Retour" />
+            <Label style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;" text="Catalogue des Stages">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      
+      <!-- Contenu principal -->
+      <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         
+         <children>
+            <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Liste des Stages Disponibles" />
+            
+            <TableView fx:id="catalogueTable" prefHeight="500.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="referenceColumn" prefWidth="120.0" text="Référence" />
+                  <TableColumn fx:id="titreColumn" prefWidth="200.0" text="Titre" />
+                  <TableColumn fx:id="sujetColumn" prefWidth="300.0" text="Sujet" />
+                  <TableColumn fx:id="dureeColumn" prefWidth="100.0" text="Durée (j)" />
+                  <TableColumn fx:id="responsableColumn" prefWidth="150.0" text="Responsable" />
+                  <TableColumn fx:id="candidaturesColumn" prefWidth="120.0" text="Candidatures" />
+               </columns>
+            </TableView>
+            
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Button fx:id="imprimerButton" onAction="#handleImprimer" text="Imprimer Catalogue" />
+                  <Button fx:id="actualiserButton" onAction="#handleActualiser" text="Actualiser" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            
+            <Label fx:id="infoLabel" text="Catalogue de tous les stages disponibles." textFill="#666666" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>
