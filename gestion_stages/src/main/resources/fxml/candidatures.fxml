@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="rootContainer" prefHeight="800.0" prefWidth="1200.0" maxHeight="Infinity" maxWidth="Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionstages.controller.CandidaturesController">
+   <children>
+      <!-- En-tête sombre -->
+      <HBox alignment="CENTER_LEFT" style="-fx-background-color: #1a2035; -fx-padding: 15 20;">
+         <children>
+            <Label text="Gestion des Stages" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Pane HBox.hgrow="ALWAYS" />
+            <Label text="Connecté: Utilisateur" textFill="LIGHTGRAY">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+
+      <!-- Barre de navigation -->
+      <HBox fx:id="navBar" alignment="CENTER_LEFT" style="-fx-background-color: #e0e0e0; -fx-border-color: #cccccc; -fx-border-width: 0 0 1 0;">
+         <padding>
+            <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+         </padding>
+         <children>
+            <Button fx:id="retourButton" text="Retour" style="-fx-background-color: #6c757d; -fx-text-fill: white;" />
+            <Label fx:id="sectionTitle" text="Gestion des Candidatures" style="-fx-font-weight: bold; -fx-padding: 0 0 0 20;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+
+      <!-- Contenu principal -->
+      <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+
+         <children>
+            <Label text="Liste des Candidatures" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+            <TableView fx:id="candidaturesTable" prefHeight="300.0" VBox.vgrow="ALWAYS">
+               <columns>
+                  <TableColumn fx:id="candidatColumn" prefWidth="180.0" text="Candidat" />
+                  <TableColumn fx:id="stageColumn" prefWidth="200.0" text="Stage" />
+                  <TableColumn fx:id="statutColumn" prefWidth="100.0" text="Statut" />
+                  <TableColumn fx:id="typeColumn" prefWidth="80.0" text="Type" />
+                  <TableColumn fx:id="conventionColumn" prefWidth="150.0" text="Convention" />
+               </columns>
+            </TableView>
+
+            <HBox spacing="10.0" alignment="CENTER_LEFT">
+               <children>
+                  <Button fx:id="selectionnerButton" onAction="#handleSelectionner" text="Sélectionner" />
+                  <Button fx:id="refuserButton" onAction="#handleRefuser" text="Refuser" />
+                  <Button fx:id="accepterButton" onAction="#handleAccepter" text="Accepter" />
+                  <Button fx:id="annulerButton" onAction="#handleAnnuler" text="Annuler Sélection" />
+                  <Button fx:id="signerConventionButton" onAction="#handleSignerConvention" text="Marquer Signée" />
+                  <Button fx:id="imprimerConventionButton" onAction="#handleImprimerConvention" text="Imprimer Convention" />
+                  <Button fx:id="envoyerConventionButton" onAction="#handleEnvoyerConvention" text="Envoyer Convention" />
+
+                  <Button fx:id="promouvoirButton" onAction="#handlePromouvoir" text="Promouvoir en stagiaire" />
+                  <Button fx:id="supprimerButton" onAction="#handleSupprimer" text="Supprimer" />
+               </children>
+               <padding>
+                  <Insets top="10.0" bottom="10.0" />
+               </padding>
+            </HBox>
+
+            <Separator prefWidth="200.0" />
+
+            <VBox fx:id="ajoutSection" spacing="10.0">
+               <children>
+                  <Label text="Ajouter un nouveau candidat" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+
+                  <HBox spacing="20.0">
+                     <children>
+                        <!-- Informations du candidat -->
+                        <VBox spacing="10.0" minWidth="400.0">
+                           <children>
+                              <Label text="Informations du candidat" style="-fx-font-weight: bold;" />
+
+                              <GridPane hgap="10.0" vgap="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="120.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Nom:" />
+                                    <TextField fx:id="nomField" GridPane.columnIndex="1" />
+
+                                    <Label text="Prénom:" GridPane.rowIndex="1" />
+                                    <TextField fx:id="prenomField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                                    <Label text="Email:" GridPane.rowIndex="2" />
+                                    <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                                    <Label text="Téléphone:" GridPane.rowIndex="3" />
+                                    <TextField fx:id="telephoneField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                                    <Label text="Type d'envoi:" GridPane.rowIndex="4" />
+                                    <ComboBox fx:id="typeEnvoiCombo" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                                    <Label text="École:" GridPane.rowIndex="5" />
+                                    <ComboBox fx:id="ecoleCombo" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                 </children>
+                              </GridPane>
+
+                              <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="Date début souhaitée:" />
+                                    <DatePicker fx:id="dateDebutPicker" />
+                                 </children>
+                              </HBox>
+
+                              <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                 <children>
+                                    <Label text="CV:" />
+                                    <TextField fx:id="cvField" prefWidth="200.0" />
+                                    <Button fx:id="parcourirButton" text="Parcourir..." onAction="#handleParcourir" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+
+                        <!-- Sélection des stages -->
+                        <VBox spacing="10.0" minWidth="400.0">
+                           <children>
+                              <Label text="Stages à postuler (max 3)" style="-fx-font-weight: bold;" />
+                              
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label text="Stage 1:" />
+                                    <ComboBox fx:id="stage1Combo" prefWidth="400.0" />
+                                 </children>
+                              </VBox>
+                              
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label text="Stage 2 (optionnel):" />
+                                    <ComboBox fx:id="stage2Combo" prefWidth="400.0" />
+                                 </children>
+                              </VBox>
+                              
+                              <VBox spacing="5.0">
+                                 <children>
+                                    <Label text="Stage 3 (optionnel):" />
+                                    <ComboBox fx:id="stage3Combo" prefWidth="400.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <Button fx:id="ajouterButton" onAction="#handleAjouter" prefWidth="200.0" text="Ajouter Candidat" />
+                        <Button fx:id="effacerButton" onAction="#handleEffacer" prefWidth="150.0" text="Effacer" />
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </VBox>
+            
+            <Label fx:id="infoLabel" text="" textFill="#666666" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

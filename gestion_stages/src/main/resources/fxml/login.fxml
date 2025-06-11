@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="800.0" prefWidth="1200.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gestionstages.controller.LoginController" maxHeight="Infinity" maxWidth="Infinity" style="-fx-background-color: #f5f5f5;">
+   <children>
+      <!-- En-tête sombre -->
+      <HBox alignment="CENTER" style="-fx-background-color: #1a2035; -fx-padding: 20;">
+         <children>
+            <Label text="Gestion des Stages" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      
+      <!-- Formulaire de connexion -->
+      <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: white; -fx-border-color: #e0e0e0; -fx-border-width: 1; -fx-border-radius: 5;" maxWidth="400">
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         
+         <children>
+            <Label text="Connexion" style="-fx-font-size: 18; -fx-font-weight: bold;" />
+            
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Email:" />
+                  <TextField fx:id="emailField" promptText="Entrez votre email" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Mot de passe:" />
+                  <PasswordField fx:id="passwordField" promptText="Entrez votre mot de passe" />
+               </children>
+            </VBox>
+            
+            <Button fx:id="loginButton" onAction="#handleLogin" prefWidth="150.0" text="Se connecter" />
+            
+            <Label fx:id="errorLabel" textFill="RED" visible="false" />
+         </children>
+      </VBox>
+      
+      <Label text="© 2024 Gestion des Stages - Tous droits réservés" textFill="#666666">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

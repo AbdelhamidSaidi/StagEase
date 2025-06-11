@@ -1,0 +1,118 @@
+@startuml
+skinparam style strictuml
+left to right direction
+
+enum TypeEnvoi {
+  EMAIL
+  POSTAL
+}
+
+enum StatutCandidature {
+  EN_ATTENTE
+  SELECTIONNE
+  ACCEPTE
+  REFUSE
+  ANNULE
+}
+
+enum TypeUtilisateur {
+  RESPONSABLE_STAGES
+  RESPONSABLE_PERSONNEL
+}
+
+abstract class Personne {
+  -id: int
+  -nom: String
+  -prenom: String
+  -telephone: String
+  -email: String
+}
+
+class Candidat {
+  -cvFichier: String
+  -typeEnvoi: TypeEnvoi
+  -dateDebutSouhaitee: LocalDate
+  -ecoleId: int
+  -ecoleNom: String
+  +getNomComplet(): String
+}
+
+class Utilisateur {
+  -motDePasse: String
+  -typeUtilisateur: TypeUtilisateur
+  +getNomComplet(): String
+}
+
+class Ecole {
+  -id: int
+  -nom: String
+  -adresse: String
+}
+
+class Stage {
+  -id: int
+  -reference: String
+  -titre: String
+  -sujet: String
+  -duree: int
+  -responsableId: int
+  -responsableNom: String
+}
+
+class Candidature {
+  -id: int
+  -candidatId: int
+  -stageId: int
+  -statut: StatutCandidature
+  -candidatNom: String
+  -stageTitre: String
+  -dateEnvoiConvention: LocalDate
+  -conventionSignee: boolean
+  -fichierConvention: String
+  -dateSignatureConvention: LocalDate
+  +peutEtreAcceptee(): boolean
+  +getStatutConvention(): String
+}
+
+class Stagiaire {
+  -id: int
+  -candidatId: int
+  -stageId: int
+  -numeroBadge: String
+  -dateArriveeEffective: LocalDate
+  -dateDepartEffective: LocalDate
+  -joursConge: int
+  -noteTravail: Double
+  -noteComportement: Double
+  -noteRapport: Double
+  -candidatNom: String
+  -stageTitre: String
+  -stageReference: String
+  +getMoyenneNotes(): Double
+}
+
+' Inheritance
+Personne <|-- Candidat
+Personne <|-- Utilisateur
+
+' Associations
+Candidat "1" --> "1" Ecole
+Candidat "1" --> "*" Candidature
+Stage "1" --> "*" Candidature
+Stage "1" --> "1" Utilisateur
+Candidature "1" --> "1" Stagiaire
+
+' Notes
+note right of TypeEnvoi
+  Modes d'envoi des candidatures
+end note
+
+note bottom of Candidat
+  Un candidat peut avoir au maximum 3 candidatures.
+end note
+
+note bottom of Utilisateur
+  Un utilisateur de type RESPONSABLE_STAGES
+  peut gérer jusqu'à 5 stages maximum.
+end note
+@enduml
