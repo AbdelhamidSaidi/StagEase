@@ -17,8 +17,6 @@ Une application JavaFX complète pour la gestion des stages en entreprise, déve
 - [Utilisation](#utilisation)
 - [Comptes de test](#comptes-de-test)
 - [Structure du projet](#structure-du-projet)
-- [Contribution](#contribution)
-- [Licence](#licence)
 
 ## 🎯 Aperçu
 
