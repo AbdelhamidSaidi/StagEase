@@ -248,16 +248,6 @@ mvn clean resources:resources compile
 - Tester les nouvelles fonctionnalités
 - Suivre les conventions Java
 
-## 📈 Roadmap
-
-- [ ] Interface web avec Spring Boot
-- [ ] API REST
-- [ ] Notifications par email
-- [ ] Génération de rapports PDF
-- [ ] Tableau de bord avec statistiques
-- [ ] Module de gestion des entreprises
-- [ ] Système de notation avancé
-
 ## 🏆 Auteurs
 
 - Abdelhamid SAIDI 
