@@ -7,17 +7,6 @@ Une application JavaFX complète pour la gestion des stages en entreprise, déve
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-blue)
 ![Maven](https://img.shields.io/badge/Maven-3.6+-green)
 
-## 📋 Table des matières
-
-- [Aperçu](#aperçu)
-- [Fonctionnalités](#fonctionnalités)
-- [Technologies](#technologies)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Utilisation](#utilisation)
-- [Comptes de test](#comptes-de-test)
-- [Structure du projet](#structure-du-projet)
-
 ## 🎯 Aperçu
 
 Ce système permet de gérer efficacement le processus complet des stages en entreprise, de la création des offres jusqu'à l'évaluation des stagiaires. Il offre deux interfaces distinctes selon le type d'utilisateur :
@@ -181,7 +170,7 @@ Mot de passe: password123
 
 ## 📁 Structure du projet
 
-\\\`
+```
 gestion-stages/
 ├── 📄 pom.xml                          # Configuration Maven
 ├── 📄 README.md                        # Ce fichier
@@ -200,38 +189,38 @@ gestion-stages/
 │       └── 📁 resources/
 │           └── 📁 fxml/                        # Fichiers FXML
 └── 📁 target/                          # Fichiers compilés (généré)
-\\\`
+```
 
 ## 🐛 Dépannage
 
 ### Problèmes courants
 
 *Erreur de connexion MySQL*
-\\\`bash
+```bash
 # Vérifier que MySQL est démarré
 sudo systemctl status mysql
 
 # Recréer la base de données
 mysql -u root -p < scripts/create-database-final.sql
-\\\`
+```
 
 *Erreur JavaFX*
-\\\`bash
+```bash
 # Ajouter les modules JavaFX
 mvn javafx:run -Djavafx.args="--add-modules javafx.controls,javafx.fxml"
-\\\`
+```
 
 *Erreur de compilation*
-\\\`bash
+```bash
 # Nettoyer et recompiler
 mvn clean compile
-\\\`
+```
 
 *Fichiers FXML non trouvés*
-\\\`bash
+```bash
 # Forcer la copie des ressources
 mvn clean resources:resources compile
-\\\`
+```
 
 ## 📊 Base de données
 
@@ -246,13 +235,13 @@ mvn clean resources:resources compile
 
 ### Sauvegarde
 
-\\\`bash
+```bash
 # Créer une sauvegarde
 mysqldump -u root -p gestion_stages > backup_$(date +%Y%m%d).sql
 
 # Restaurer une sauvegarde
 mysql -u root -p gestion_stages < backup_20240101.sql
-\\\`
+```
 
 ## 🤝 Contribution
 
