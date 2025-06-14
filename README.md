@@ -233,16 +233,6 @@ mvn clean resources:resources compile
 - *candidatures* : Candidatures aux stages
 - *stagiaires* : Stagiaires acceptés
 
-### Sauvegarde
-
-```bash
-# Créer une sauvegarde
-mysqldump -u root -p gestion_stages > backup_$(date +%Y%m%d).sql
-
-# Restaurer une sauvegarde
-mysql -u root -p gestion_stages < backup_20240101.sql
-```
-
 ## 🤝 Contribution
 
 1. Fork le projet
