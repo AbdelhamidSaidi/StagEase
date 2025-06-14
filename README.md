@@ -250,6 +250,6 @@ mvn clean resources:resources compile
 
 ## 🏆 Auteurs
 
-- Abdelhamid SAIDI 
-- Anas RIFAK - [@anas_rifak](https://github.com/TheStriked)
+- Abdelhamid SAIDI - [@abdelhamid_saidi](https://www.linkedin.com/in/abdelhamid-saidi-181582326/)
+- Anas RIFAK - [@anas_rifak](https://www.linkedin.com/in/anas-rifak-502347343/)
 - Safaa MOUFKI - [@safaa_moufki](https://www.linkedin.com/in/moufki-safaa-6354a0279/)
