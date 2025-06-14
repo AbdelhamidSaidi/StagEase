@@ -252,4 +252,4 @@ mvn clean resources:resources compile
 
 - Abdelhamid SAIDI 
 - Anas RIFAK - [@anas_rifak](https://github.com/TheStriked)
-- Safaa MOUFKI - [@safaa_moufki](https://github.com/TheStriked)
+- Safaa MOUFKI - [@safaa_moufki]((https://www.linkedin.com/in/moufki-safaa-6354a0279/))
