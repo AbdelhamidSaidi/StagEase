@@ -1,4 +1,4 @@
-# 🎓 Système de Gestion des Stages
+# 🎓 Système de Gestion des Stages (StagEase)
 
 Une application JavaFX complète pour la gestion des stages en entreprise, développée avec Maven et MySQL.
 
